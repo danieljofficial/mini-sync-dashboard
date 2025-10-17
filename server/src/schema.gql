@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @upper on FIELD_DEFINITION
+
+type Activity {
+  _id: ID!
+  category: String!
+  createdAt: DateTime!
+  expiresAt: DateTime
+  isActive: Boolean!
+  message: String!
+  title: String!
+}
+
+input CreateActivityInput {
+  category: String!
+  expiresAt: String!
+  message: String!
+  title: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createActivity(createActivityInput: CreateActivityInput!): Activity!
+}
+
+type Query {
+  getActiveActivities: [Activity!]!
+  getActivities: [Activity!]!
+  getActivitiesByCategory(category: String!): [Activity!]!
+}
+
+type Subscription {
+  activityCreated: Activity!
+}
