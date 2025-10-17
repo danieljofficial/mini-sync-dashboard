@@ -53,21 +53,25 @@ A real-time user activity synchronization system with web admin dashboard and mo
 
 ### Backend
 
-````bash
+```bash
 cd server
 npm install
 # Set MONGODB_URI in .env (default: mongodb://localhost:27017/sync-dashboard)
 npm run start:dev
+```
 
 ### Web
+
 ```bash
 cd web
 npm install
 npm run dev
+```
 
 ### mobile
+
 ```bash
 cd mobile
 npm install
 npx expo start
-````
+```
